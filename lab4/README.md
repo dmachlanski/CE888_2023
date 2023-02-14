@@ -4,7 +4,7 @@
 
 Prerequisites
 1. Complete Unit 4 Moodle quiz first.
-2. Install EconML package with 'pip install econml' or 'pip install --user econml'.
+2. Install EconML package with `pip install econml` or `pip install --user econml`.
 3. Implement $\epsilon_{ATE}$ and $\epsilon_{PEHE}$ evaluation metrics. See lecture slides for help. You should have done this already as part of the Moodle quiz. You can re-use your quiz answers here. Have the code for the metrics ready to use in your notebook or python script.
 
 Data
