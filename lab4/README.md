@@ -15,9 +15,9 @@ Data
 
 Modelling
 1. Estimate ATEs and ITEs with 3 different types of causal models: S-Learner, IPSW and X-Learner. Train the model on the training data and make predictions on the test set. See lecture slides for help. You are free to use any regressors and classifiers you like (e.g. Random Forests). To merge X and T, you can use `np.hstack` or `np.concatenate`. When predicting outcomes, `np.zeros` and `np.ones` might be useful.
-    a) **S-Learner**. Training input: [X,T], training target: Y. Predict $Y_0$ and $Y_1$. Compute ITEs.
-    b) **IPSW**. You will need to compute *propensity score weights* with a classifier first. See the function inside the [ipsw.py](ipsw.py) file. Use it to get the weights. Training and prediction is similar to a) but you will need to pass the weights as sample weights to the fit function.
-    c) **X-Learner**. Train on X, T and Y data. Use the `effect` function to predict ITEs. See the docs [here](https://econml.azurewebsites.net/_autosummary/econml.metalearners.XLearner.html#econml.metalearners.XLearner).
+    - **S-Learner**. Training input: [X,T], training target: Y. Predict $Y_0$ and $Y_1$. Compute ITEs.
+    - **IPSW**. You will need to compute *propensity score weights* with a classifier first. See the function inside the [ipsw.py](ipsw.py) file. Use it to get the weights. Training and prediction is similar to a) but you will need to pass the weights as sample weights to the fit function.
+    - **X-Learner**. Train on X, T and Y data. Use the `effect` function to predict ITEs. See the docs [here](https://econml.azurewebsites.net/_autosummary/econml.metalearners.XLearner.html#econml.metalearners.XLearner).
 
 Evaluation
 1. Calculate $\epsilon_{ATE}$ and $\epsilon_{PEHE}$ metrics on the test set for all 3 models based on your predictions and true effects that can be accessed in the dataset.
